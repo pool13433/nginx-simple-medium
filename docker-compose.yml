@@ -1,0 +1,23 @@
+version: '2'
+services:
+  medium_a:
+    image: nginx:1.13.0-alpine
+    container_name: medium_a
+    ports:
+      - '8888:80'
+    expose:
+      - 80
+    volumes:
+      - ///c/Users/PoolPC/volumns/sites/medium_a:/var/www/html/website
+      - ///c/Users/PoolPC/volumns/nginx:/etc/nginx
+
+  medium_b:
+    image: nginx:1.13.0-alpine
+    container_name: medium_b
+    ports:
+      - '8899:80'
+    expose:
+      - 80
+    volumes:
+      - ///c/Users/PoolPC/volumns/sites/medium_b:/var/www/html/website
+      - ///c/Users/PoolPC/volumns/nginx:/etc/nginx
